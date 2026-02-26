@@ -9,22 +9,12 @@ use crate::models::TokenResponse;
 
 const TOKEN_BUFFER_SECONDS: i64 = 30;
 
+#[derive(Default)]
 pub(crate) struct TokenState {
     pub(crate) access_token: String,
     pub(crate) refresh_token: String,
     pub(crate) expires_at: i64,
     pub(crate) refresh_expires_at: i64,
-}
-
-impl Default for TokenState {
-    fn default() -> Self {
-        Self {
-            access_token: String::new(),
-            refresh_token: String::new(),
-            expires_at: 0,
-            refresh_expires_at: 0,
-        }
-    }
 }
 
 /// QPay API client with automatic token management.
