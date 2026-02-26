@@ -387,8 +387,8 @@ fn test_create_ebarimt_request_serialize() {
     assert!(json.contains("\"payment_id\":\"pay_001\""));
     assert!(json.contains("\"ebarimt_receiver_type\":\"83\""));
     assert!(json.contains("\"district_code\":\"23\""));
-    assert!(!json.contains("ebarimt_receiver"));
-    assert!(!json.contains("classification_code"));
+    assert!(!json.contains("\"ebarimt_receiver\":"));
+    assert!(!json.contains("\"classification_code\":"));
 }
 
 #[test]
