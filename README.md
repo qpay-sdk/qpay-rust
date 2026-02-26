@@ -1,5 +1,9 @@
 # qpay
 
+[![crates.io](https://img.shields.io/crates/v/qpay.svg)](https://crates.io/crates/qpay)
+[![docs.rs](https://docs.rs/qpay/badge.svg)](https://docs.rs/qpay)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 QPay V2 API SDK for Rust. Async client with automatic token management, invoice creation, payment operations, and ebarimt (electronic tax receipt) support.
 
 ## Installation

@@ -4,6 +4,12 @@ version = "1.0.0"
 edition = "2021"
 description = "QPay V2 API SDK for Rust"
 license = "MIT"
+repository = "https://github.com/qpay-sdk/qpay-rust"
+homepage = "https://github.com/qpay-sdk/qpay-rust"
+documentation = "https://docs.rs/qpay"
+readme = "README.md"
+keywords = ["qpay", "payment", "mongolia", "invoice", "fintech"]
+categories = ["api-bindings"]
 
 [dependencies]
 reqwest = { version = "0.12", features = ["json"] }
