@@ -1,5 +1,6 @@
 # qpay
 
+[![CI](https://github.com/qpay-sdk/qpay-rust/actions/workflows/ci.yml/badge.svg)](https://github.com/qpay-sdk/qpay-rust/actions/workflows/ci.yml)
 [![crates.io](https://img.shields.io/crates/v/qpay.svg)](https://crates.io/crates/qpay)
 [![docs.rs](https://docs.rs/qpay/badge.svg)](https://docs.rs/qpay)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
