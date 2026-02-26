@@ -1,4 +1,5 @@
 use qpay::{QPayConfig, QPayError};
+use serial_test::serial;
 
 #[test]
 fn test_config_new() {
@@ -61,6 +62,7 @@ fn test_config_debug() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_success() {
     // Set all required environment variables
     std::env::set_var("QPAY_BASE_URL", "https://merchant.qpay.mn");
@@ -86,6 +88,7 @@ fn test_config_from_env_success() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_missing_base_url() {
     std::env::remove_var("QPAY_BASE_URL");
     std::env::set_var("QPAY_USERNAME", "user");
@@ -112,6 +115,7 @@ fn test_config_from_env_missing_base_url() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_missing_username() {
     std::env::set_var("QPAY_BASE_URL", "url");
     std::env::remove_var("QPAY_USERNAME");
@@ -131,6 +135,7 @@ fn test_config_from_env_missing_username() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_missing_password() {
     std::env::set_var("QPAY_BASE_URL", "url");
     std::env::set_var("QPAY_USERNAME", "user");
@@ -150,6 +155,7 @@ fn test_config_from_env_missing_password() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_missing_invoice_code() {
     std::env::set_var("QPAY_BASE_URL", "url");
     std::env::set_var("QPAY_USERNAME", "user");
@@ -172,6 +178,7 @@ fn test_config_from_env_missing_invoice_code() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_missing_callback_url() {
     std::env::set_var("QPAY_BASE_URL", "url");
     std::env::set_var("QPAY_USERNAME", "user");
@@ -194,6 +201,7 @@ fn test_config_from_env_missing_callback_url() {
 }
 
 #[test]
+#[serial]
 fn test_config_from_env_error_is_config_variant() {
     std::env::remove_var("QPAY_BASE_URL");
     std::env::remove_var("QPAY_USERNAME");
